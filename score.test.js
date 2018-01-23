@@ -75,3 +75,18 @@ describe('Inputs with multiple spares', () => {
   });
 
 });
+
+
+
+describe('Inputs with multiple strikes', () => {
+  test('With two consecutive spares', () =>{
+    expect(score([10, 10 , 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])).toBe(114);
+  });
+
+  test('With not consecutive spares', () =>{
+    expect(score([10, 10 , 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])).toBe(110);
+  });
+
+
+
+});

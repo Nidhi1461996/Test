@@ -15,10 +15,10 @@ function score(input){
 
     }
 
-    else if(input[i]===10){
+    else if(input[i]===10 && input[i-1]!==10){
       let temp=input[i-1]+input[i]+input[i+1];
       totalScore+=temp;
-
+      console.log(totalScore);
 
     }
 
@@ -43,4 +43,4 @@ function score(input){
 
 module.exports=score;
 
-//console.log(score([3, 6, 4, 6, 3, 6, 3, 7, 4, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]));
+console.log(score([10, 3,6 , 3, 6, 10, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]));
