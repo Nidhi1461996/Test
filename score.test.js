@@ -32,12 +32,28 @@ describe('Inputs with spares but not in the 10th frame', () => {
 
 
 describe('Inputs with strikes but not in the 10th frame', () => {
-  test('With one spare', () =>{
+  test('With strike in the first chance', () =>{
     expect(score([10, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3])).toBe(100);
   });
 
-  // test('With more than one spare', () =>{
-  //   expect(score([4, 6, 3, 10, 3, 6, 4, 10, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])).toBe(98);
-  // });
+  test('With strike in the middle', () =>{
+    expect(score([3, 6, 3, 6, 10, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3])).toBe(100);
+  });
+
+});
+
+
+describe('Inputs with strikes and spares not in the 10th frame', () => {
+  test('With strike in the first frame and spare in the second frame', () =>{
+    expect(score([10, 6, 4, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3])).toBe(108);
+  });
+
+  test('With strike and spare in the middle', () =>{
+    expect(score([3, 6, 3, 6, 10, 6, 3, 6, 4, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3])).toBe(107);
+  });
+
+  test('With spare in the first frame and strike in the middle', () =>{
+    expect(score([4, 6, 3, 6, 10, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3])).toBe(104);
+  });
 
 });
