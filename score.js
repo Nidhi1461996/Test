@@ -11,5 +11,4 @@ function score(input){
   return totalScore;
 }
 
-
 module.exports=score;
