@@ -57,3 +57,21 @@ describe('Inputs with strikes and spares not in the 10th frame', () => {
   });
 
 });
+
+
+
+
+describe('Inputs with multiple spares', () => {
+  test('With two consecutive spares', () =>{
+    expect(score([4, 6, 4, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])).toBe(99);
+  });
+
+  test('With not consecutive spares', () =>{
+    expect(score([3, 6, 4, 6, 3, 6, 3, 7, 4, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])).toBe(103);
+  });
+
+  test('With all astrikes except the last frame', () =>{
+    expect(score([4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 4, 6, 3, 6])).toBe(134);
+  });
+
+});
