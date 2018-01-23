@@ -17,3 +17,13 @@ describe('Inputs without spare or strike', () => {
 
 
 });
+
+
+describe('Inputs with spares', () => {
+  test('With one spare', () =>{
+    expect(score([4, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])).toBe(94);
+  });
+
+
+
+});
