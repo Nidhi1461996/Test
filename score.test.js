@@ -11,9 +11,9 @@ describe('Inputs without spare or strike', () => {
     expect(score([0, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])).toBe(87);
   });
 
-  // test('With all scores as zero', () =>{
-  //   expect(score([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])).toBe(0);
-  // });
+  test('With all scores as zero', () =>{
+    expect(score([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])).toBe(0);
+  });
 
 
 });
