@@ -29,3 +29,15 @@ describe('Inputs with spares but not in the 10th frame', () => {
   });
 
 });
+
+
+describe('Inputs with strikes but not in the 10th frame', () => {
+  test('With one spare', () =>{
+    expect(score([10, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3])).toBe(100);
+  });
+
+  // test('With more than one spare', () =>{
+  //   expect(score([4, 6, 3, 10, 3, 6, 4, 10, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6])).toBe(98);
+  // });
+
+});

@@ -11,9 +11,23 @@ function score(input){
       totalScore+=temp;
       totalScore+=input[i+1];
     }
+
+    else if(input[i]===10){
+      let temp=input[i-1]+input[i]+input[i+1];
+      totalScore+=temp;
+
+    }
+
+    else if(input[i-1]===10){
+      let temp=input[i-1]+input[i]+input[i+1];
+      totalScore+=temp;
+      i=i-1;
+    }
+
     else{
       let temp = input[i] + input[i-1];
       totalScore+=temp;
+
     }
 
   }
@@ -22,3 +36,5 @@ function score(input){
 }
 
 module.exports=score;
+
+//console.log(score([4, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]));
